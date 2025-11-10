@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Load_Balancer/Core/Src/flash_storage.c&apos;" deleteContents="false" description="Delete resource &apos;Load_Balancer/Core/Src/flash_storage.c&apos;" element1="/Load_Balancer/Core/Src/flash_storage.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1751564745560"/>&#x0A;<refactoring comment="Delete resource &apos;Load_Balancer/Core/Inc/flash_storage.h&apos;" deleteContents="false" description="Delete resource &apos;Load_Balancer/Core/Inc/flash_storage.h&apos;" element1="/Load_Balancer/Core/Inc/flash_storage.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1751564828456"/>
+</session>

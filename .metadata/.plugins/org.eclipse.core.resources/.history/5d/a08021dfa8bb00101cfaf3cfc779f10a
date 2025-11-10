@@ -1,0 +1,705 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * File Name          : app_freertos.c
+  * Description        : Code for freertos applications
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "FreeRTOS.h"
+#include "task.h"
+#include "main.h"
+#include "cmsis_os.h"
+
+#include "app_subghz_phy.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include "semphr.h"
+#include "mcp3912Lib.h"
+#include "Flashlib.h"
+#include "stdbool.h"
+#include "radio.h"
+#include "rak3172LoRa.h"
+#include "string.h"
+#include "aes.h"
+#include "stdio.h"
+#include "stdlib.h"
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+
+
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+#define CONFIG_ADDR ((uint32_t)0x0803F000)
+#define SN_ADDR     ((uint32_t)0x0803F800)
+
+#define RX_TIMEOUT 5000
+#define WATCHDOG_TIMEOUT 10000
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+/* USER CODE BEGIN Variables */
+
+uint64_t ConfigData[8];
+volatile PhaseRelation DetectedPhases;
+volatile PhaseRelation TempPhases;
+
+volatile Directions    DefaultDirections;
+volatile Directions    TempDirections;
+volatile Directions    CurrentDirections;
+
+LoadBalancer_t confLBType  = NotApper;
+LoadBalancer_t savedLBType = NotApper;
+
+float threshold = 0.5;  // 700 mA
+
+static int lbConfmCounter = 0;
+uint8_t confirm=0;
+bool writeFlash= false;
+
+
+
+
+#define AES_KEY_SIZE 16
+#define AES_BLOCK_SIZE 16
+
+#define LB_TX_SIZE 32
+
+
+uint8_t key[AES_KEY_SIZE] = {
+          0x7f, 0x7e, 0x15, 0x16,
+          0x28, 0xae, 0xd2, 0xa6,
+          0xab, 0xf9, 0x5c, 0x11,
+          0x00, 0xa0, 0x10, 0x01
+      };
+
+uint8_t iv[AES_BLOCK_SIZE]={
+		0x11, 0x22, 0x33, 0x44,
+		0x55, 0x66, 0x77, 0x88,
+        0x99, 0xAA, 0xBB, 0xCC,
+		0xDD, 0xEE, 0xFF, 0x00
+     };
+
+
+
+
+uint8_t LoRaLB_Tx[LB_TX_SIZE];
+
+uint8_t SNW[11] = "CN19680106";  //detect serial number write
+uint8_t SN[11] ="CN43210000";
+uint8_t SNR[11];
+uint8_t RN[11];
+int8_t chargeBit = 5; // set to unrecognize value
+
+
+SemaphoreHandle_t xDataReadySemaphore;
+SemaphoreHandle_t xBuffersReadySemaphore;
+
+
+volatile uint32_t lastHeartbeat_T02 = 0;
+volatile uint32_t lastHeartbeat_T03 = 0;
+
+
+
+/* USER CODE END Variables */
+/* Definitions for MainTask */
+//osThreadId_t MainTaskHandle;
+//const osThreadAttr_t MainTask_attributes = {
+//  .name = "MainTask",
+//  .priority = (osPriority_t) osPriorityNormal,
+//  .stack_size = 128 * 4
+//};
+
+/* Private function prototypes -----------------------------------------------*/
+/* USER CODE BEGIN FunctionPrototypes */
+
+
+
+TaskHandle_t MainTaskHandle;
+void MainTask(void *pvParameters);
+
+
+TaskHandle_t Task02_handler;
+void Task02(void *pvParameters);
+
+TaskHandle_t Task03_handler;
+void Task03(void *pvParameters);
+
+TaskHandle_t Task04_handler;
+void Task04(void *pvParameters);
+
+void parsePacket(void);
+
+void LoadSerialNumber(void);
+
+/* USER CODE END FunctionPrototypes */
+
+void StartMainTask(void *argument);
+
+void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
+
+/**
+  * @brief  FreeRTOS initialization
+  * @param  None
+  * @retval None
+  */
+void MX_FREERTOS_Init(void) {
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* USER CODE BEGIN RTOS_MUTEX */
+  /* add mutexes, ... */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* add semaphores, ... */
+
+  xDataReadySemaphore = xSemaphoreCreateBinary();
+
+  xBuffersReadySemaphore = xSemaphoreCreateBinary();
+
+
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
+  /* start timers, add new ones, ... */
+  /* USER CODE END RTOS_TIMERS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
+  /* add queues, ... */
+  /* USER CODE END RTOS_QUEUES */
+
+  /* Create the thread(s) */
+  /* creation of MainTask */
+//  MainTaskHandle = osThreadNew(StartMainTask, NULL, &MainTask_attributes);
+
+  /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
+
+  xTaskCreate(MainTask, "TkMain", 512, NULL, 2, &MainTaskHandle);
+
+  xTaskCreate(Task02, "Tk02", 192, NULL, 3, &Task02_handler);
+
+  xTaskCreate(Task03, "Tk03", 128, NULL, 2, &Task03_handler);
+
+  xTaskCreate(Task04, "Tk04", 512, NULL, 4, &Task04_handler);
+
+
+  vTaskStartScheduler();
+
+  /* USER CODE END RTOS_THREADS */
+
+  /* USER CODE BEGIN RTOS_EVENTS */
+  /* add events, ... */
+  /* USER CODE END RTOS_EVENTS */
+
+}
+
+/* USER CODE BEGIN Header_StartMainTask */
+/**
+  * @brief  Function implementing the MainTask thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_StartMainTask */
+//void StartMainTask(void *argument)
+//{
+  /* init code for SubGHz_Phy */
+//  MX_SubGHz_Phy_Init();
+  /* USER CODE BEGIN StartMainTask */
+//
+//  /* Infinite loop */
+//  for(;;)
+//  {
+//
+//
+// }
+  /* USER CODE END StartMainTask */
+//}
+
+/* Private application code --------------------------------------------------*/
+/* USER CODE BEGIN Application */
+
+// Initialize and calibrate data
+
+
+void MainTask(void *argument)
+{
+  HAL_GPIO_WritePin(RED_LED_GPIO_Port,RED_LED_Pin , GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(YEL_LED_GPIO_Port,YEL_LED_Pin , GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GRN_LED_GPIO_Port, GRN_LED_Pin, GPIO_PIN_RESET);
+  for(int i=0 ;i<25;i++)
+  {
+	  HAL_GPIO_TogglePin(RED_LED_GPIO_Port, RED_LED_Pin);
+	  vTaskDelay(100);
+  }
+
+      Flash_Read_data(CONFIG_ADDR,ConfigData, 8);
+
+      ConfigData[0] = (uint64_t)1; //calibration confirm
+ 	  ConfigData[1] = (uint64_t)1;
+ 	  ConfigData[2] = (uint64_t)1;
+ 	  ConfigData[3] = (uint64_t)2;
+ 	  ConfigData[4] = (uint64_t)3;
+ 	  ConfigData[5] = (uint64_t)1;
+ 	  ConfigData[6] = (uint64_t)1;
+ 	  ConfigData[7] = (uint64_t)1;
+
+
+  // load calibrated data if availabale
+  if(!ConfigData[0])
+  { // do the calibration
+	  vTaskSuspend(Task03_handler);
+	  vTaskSuspend(Task04_handler);
+
+	 HAL_GPIO_WritePin(GRN_LED_GPIO_Port, GRN_LED_Pin,GPIO_PIN_SET);
+	 HAL_GPIO_WritePin(YEL_LED_GPIO_Port, YEL_LED_Pin,GPIO_PIN_SET);
+	 HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin,GPIO_PIN_SET);
+
+  }
+
+  else
+  {
+      // read saved data
+	  savedLBType = ConfigData[1];
+	  DetectedPhases.currentRead_1= ConfigData[2];
+	  DetectedPhases.currentRead_2=ConfigData[3];
+	  DetectedPhases.currentRead_3=ConfigData[4];
+	  DefaultDirections.ofcurrentRead_1=ConfigData[5];
+	  DefaultDirections.ofcurrentRead_2=ConfigData[6];
+	  DefaultDirections.ofcurrentRead_3=ConfigData[7];
+
+	  vTaskDelete(NULL);  // delete the main task
+
+  }
+
+  for(;;)
+  {
+
+	  LoadBalancer_t currentLB = DetectLBType(PhaseData,threshold);
+
+	      if (currentLB == confLBType) {
+	          if (++lbConfmCounter >= 10) {
+	              lbConfmCounter = 10; // or 0
+	          }
+	      } else {
+	    	  confLBType = currentLB;
+	          lbConfmCounter = 1;
+	      }
+
+	      if (lbConfmCounter < 10) {
+	          vTaskDelay(10);
+	          continue;
+	      }
+
+
+	  switch (confLBType)
+		  {
+			  case Tp:
+				  DetectedPhases.currentRead_1 = findMatchingPhase(I1B, VoltB, VoltLagB, VoltLeadB, 500);
+				  DetectedPhases.currentRead_2 = findMatchingPhase(I2B, VoltB, VoltLagB, VoltLeadB, 500);
+				  DetectedPhases.currentRead_3 = findMatchingPhase(I3B, VoltB, VoltLagB, VoltLeadB, 500);
+
+				  DefaultDirections.ofcurrentRead_1 = calculateDirection(I1B, getVoltageBuffer(DetectedPhases.currentRead_1), 400);
+				  DefaultDirections.ofcurrentRead_2 = calculateDirection(I2B, getVoltageBuffer(DetectedPhases.currentRead_2), 400);
+				  DefaultDirections.ofcurrentRead_3 = calculateDirection(I3B, getVoltageBuffer(DetectedPhases.currentRead_3), 400);
+				  break;
+
+			  case Sp1:
+				  DetectedPhases.currentRead_1 = findMatchingPhase(I1B, VoltB, VoltLagB, VoltLeadB, 500);
+				  DefaultDirections.ofcurrentRead_1 = calculateDirection(I1B, getVoltageBuffer(DetectedPhases.currentRead_1), 400);
+				  break;
+
+			  case Sp2:
+				  DetectedPhases.currentRead_2 = findMatchingPhase(I2B, VoltB, VoltLagB, VoltLeadB, 500);
+				  DefaultDirections.ofcurrentRead_2 = calculateDirection(I2B, getVoltageBuffer(DetectedPhases.currentRead_2), 400);
+				  break;
+
+			  case Sp3:
+				  DetectedPhases.currentRead_3 = findMatchingPhase(I3B, VoltB, VoltLagB, VoltLeadB, 500);
+				  DefaultDirections.ofcurrentRead_3 = calculateDirection(I3B, getVoltageBuffer(DetectedPhases.currentRead_3), 400);
+				  break;
+
+			  default:
+				  vTaskDelay(10);
+				  continue;
+		  }
+
+
+
+      if(directionsConfirm(DefaultDirections, TempDirections)
+    		  && PhasesConfirm(DetectedPhases, TempPhases))
+      {
+
+		  if (++confirm >= 5)
+		  {
+
+			  writeFlash=true;
+			  confirm = 0;
+		  }
+
+      }
+
+      else
+      {
+    	  TempDirections = DefaultDirections;
+    	  TempPhases = DetectedPhases;
+
+      }
+
+
+      if(writeFlash)
+      {
+    	  ConfigData[0] = (uint64_t)1; //calibration confirm
+    	  ConfigData[1] = (uint64_t)confLBType;
+    	  ConfigData[2] = (uint64_t)DetectedPhases.currentRead_1;
+    	  ConfigData[3] = (uint64_t)DetectedPhases.currentRead_2;
+    	  ConfigData[4] = (uint64_t)DetectedPhases.currentRead_3;
+    	  ConfigData[5] = (uint64_t)DefaultDirections.ofcurrentRead_1;
+    	  ConfigData[6] = (uint64_t)DefaultDirections.ofcurrentRead_2;
+    	  ConfigData[7] = (uint64_t)DefaultDirections.ofcurrentRead_3;
+
+
+    	  if(Flash_Erase_Page(CONFIG_ADDR)==HAL_OK)
+    	  {
+    		  Flash_Write_data(CONFIG_ADDR, ConfigData, 8);
+
+    		  //send configuration data
+    		  struct AES_ctx ctx;
+			  AES_init_ctx_iv(&ctx, key, iv);
+    		  uint8_t confCalibrate[11];
+
+    		  confCalibrate[0]=5;
+    		  confCalibrate[1]=5;
+    		  confCalibrate[2]=5;
+    		  for(int i=3;i<10;i++)
+    		  {
+    			  confCalibrate[i] = (char)(ConfigData[i-2]+'0');
+    		  }
+    		  confCalibrate[10]='\0';
+    		  memcpy(LoRaLB_Tx, confCalibrate, 11);
+    		  snprintf((char*)LoRaLB_Tx, sizeof(LoRaLB_Tx), "%s:%+.2f:%+.2f:%+.2f", confCalibrate, PhaseData.I1rms, PhaseData.I2rms,PhaseData.I3rms);
+    		  AES_CBC_encrypt_buffer(&ctx, LoRaLB_Tx, LB_TX_SIZE);
+              Radio.Send((uint8_t*)LoRaLB_Tx,LB_TX_SIZE);
+              vTaskDelay(100);
+    		  HAL_NVIC_SystemReset();  // reset
+    	  }
+
+      }
+
+	  vTaskDelay(10);
+
+  }
+  /* USER CODE END StartMainTask */
+}
+
+
+// Read and Calculate Data
+void Task02(void *pvParameters)
+{
+
+	for(;;)
+	{
+//		readChannels();
+		if(xSemaphoreTake(xDataReadySemaphore,portMAX_DELAY)==pdTRUE)
+		  {
+			readChannels();
+			  if(bufferIndex==SAMPLE_SIZE)
+			  {
+				 SwapToProcess();
+				 xSemaphoreGive(xBuffersReadySemaphore);
+				 lastHeartbeat_T02 = HAL_GetTick();
+				 vTaskDelay(4);
+			  }
+
+		  }
+
+	}
+
+}
+
+
+//
+void Task03(void *pvParameters)
+{
+
+	for(;;)
+	{
+
+		if(xSemaphoreTake(xBuffersReadySemaphore,portMAX_DELAY)==pdTRUE)
+		{
+
+			switch(savedLBType)
+			{
+		      case Tp:
+		    	    CurrentDirections.ofcurrentRead_1 = calculateDirection(I1B, getVoltageBuffer(DetectedPhases.currentRead_1), 400);
+					CurrentDirections.ofcurrentRead_2 = calculateDirection(I2B, getVoltageBuffer(DetectedPhases.currentRead_2), 400);
+					CurrentDirections.ofcurrentRead_3 = calculateDirection(I3B, getVoltageBuffer(DetectedPhases.currentRead_3), 400);
+
+
+					updateMark(1, CurrentDirections.ofcurrentRead_1, DefaultDirections.ofcurrentRead_1);
+					updateMark(2, CurrentDirections.ofcurrentRead_2, DefaultDirections.ofcurrentRead_2);
+					updateMark(3, CurrentDirections.ofcurrentRead_3, DefaultDirections.ofcurrentRead_3);
+				  break;
+
+			  case Sp1:
+				  CurrentDirections.ofcurrentRead_1 = calculateDirection(I1B, getVoltageBuffer(DetectedPhases.currentRead_1), 400);
+				  updateMark(1, CurrentDirections.ofcurrentRead_1, DefaultDirections.ofcurrentRead_1);
+				  break;
+
+			  case Sp2:
+				  CurrentDirections.ofcurrentRead_2 = calculateDirection(I2B, getVoltageBuffer(DetectedPhases.currentRead_2), 400);
+				  updateMark(2, CurrentDirections.ofcurrentRead_2, DefaultDirections.ofcurrentRead_2);
+				  break;
+
+			  case Sp3:
+				  CurrentDirections.ofcurrentRead_3 = calculateDirection(I3B, getVoltageBuffer(DetectedPhases.currentRead_3), 400);
+				  updateMark(3, CurrentDirections.ofcurrentRead_3, DefaultDirections.ofcurrentRead_3);
+				  break;
+
+			  default:
+				  vTaskDelay(3);
+				  continue;
+
+
+			}
+
+
+			lastHeartbeat_T03 = HAL_GetTick();
+
+		}
+
+		 vTaskDelay(10);
+	}
+}
+
+
+void Task04(void *pvParameters)
+{
+    // load serial number
+	Flash_Read_data_uint8(SN_ADDR, SN, 10);
+	SN[10] = '\0';
+	MX_SubGHz_Phy_Init();
+	RadioInit();
+	Radio.Rx(RX_TIMEOUT);  // enable Recieving for 5 sec
+
+	for(;;)
+	{
+		uint32_t now = HAL_GetTick();
+
+		if((now- lastHeartbeat_T02 > WATCHDOG_TIMEOUT) && (now- lastHeartbeat_T03 > WATCHDOG_TIMEOUT))
+		{
+			HAL_GPIO_WritePin(GRN_LED_GPIO_Port, GRN_LED_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(YEL_LED_GPIO_Port, YEL_LED_Pin, GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_RESET);
+			vTaskDelay(400);
+			HAL_GPIO_WritePin(RED_LED_GPIO_Port, RED_LED_Pin, GPIO_PIN_SET);
+			vTaskDelay(400);
+
+		}
+
+		else
+		{
+
+			switch(LoRaState)
+			{
+			case STATE_RX_DONE:
+				LoRaState = STATE_IDLE;
+				struct AES_ctx ctx;
+				AES_init_ctx_iv(&ctx, key, iv);
+				AES_CBC_decrypt_buffer(&ctx, (uint8_t*)LoRaLB_Rx, LB_TX_SIZE);
+
+                parsePacket();
+
+                if(strcmp((char*)SNW, (char*)SNR) == 0)
+                {
+                	// its a serial number write request
+                	// serial number is attached to RN
+                	uint64_t SN_data[2] = {0};
+                	memcpy((uint8_t*)SN_data, RN, 11);
+					if(Flash_Erase_Page(SN_ADDR)==HAL_OK)
+					  {
+						 Flash_Write_data(SN_ADDR, SN_data, 2);
+
+						 HAL_GPIO_WritePin(GRN_LED_GPIO_Port, GRN_LED_Pin, GPIO_PIN_SET);
+						 HAL_GPIO_WritePin(YEL_LED_GPIO_Port, YEL_LED_Pin, GPIO_PIN_SET);
+
+                         vTaskDelay(1000);
+						 Flash_Read_data_uint8(SN_ADDR, SN, 10);
+						 SN[10] = '\0';
+						 snprintf((char*)LoRaLB_Tx, sizeof(LoRaLB_Tx), "%s:%+.2f:%+.2f:%+.2f", SN, PhaseData.I1rms, PhaseData.I2rms,PhaseData.I3rms);
+						 AES_init_ctx_iv(&ctx, key, iv);
+						 AES_CBC_encrypt_buffer(&ctx, LoRaLB_Tx, LB_TX_SIZE);
+
+						 HAL_GPIO_WritePin(GRN_LED_GPIO_Port, GRN_LED_Pin, GPIO_PIN_RESET);
+						 HAL_GPIO_WritePin(YEL_LED_GPIO_Port, YEL_LED_Pin, GPIO_PIN_RESET);
+						 Radio.Send((uint8_t*)LoRaLB_Tx,LB_TX_SIZE);
+					  }
+
+                }
+                else if(strcmp((char*)RN, (char*)SN) == 0)
+                {
+                	// its a Load Balancer calibrate request
+                	 ConfigData[0] = (uint64_t)0; // re do the calibration
+                	 if(Flash_Erase_Page(CONFIG_ADDR)==HAL_OK)
+					  {
+						  Flash_Write_data(CONFIG_ADDR, ConfigData, 8);
+						  HAL_NVIC_SystemReset();  // reset
+					  }
+
+                }
+
+                else if(strcmp((char*)SN, (char*)SNR) == 0)
+				{
+                	// its a valid data request
+					if(chargeBit==1)
+					{
+						HAL_GPIO_TogglePin(GRN_LED_GPIO_Port, GRN_LED_Pin);
+						HAL_GPIO_WritePin(YEL_LED_GPIO_Port, YEL_LED_Pin, GPIO_PIN_RESET);
+					}
+					else if(chargeBit==0)
+					{
+						HAL_GPIO_TogglePin(YEL_LED_GPIO_Port, YEL_LED_Pin);
+						HAL_GPIO_WritePin(GRN_LED_GPIO_Port, GRN_LED_Pin, GPIO_PIN_RESET);
+					}
+					else
+					{   HAL_GPIO_TogglePin(GRN_LED_GPIO_Port, GRN_LED_Pin);
+						HAL_GPIO_TogglePin(YEL_LED_GPIO_Port, YEL_LED_Pin);
+
+					}
+
+
+
+					snprintf((char*)LoRaLB_Tx, sizeof(LoRaLB_Tx), "%s:%+.2f:%+.2f:%+.2f", RN, PhaseData.I1rms, PhaseData.I2rms,PhaseData.I3rms);
+
+					AES_init_ctx_iv(&ctx, key, iv);
+					AES_CBC_encrypt_buffer(&ctx, LoRaLB_Tx, LB_TX_SIZE);
+					vTaskDelay(pdMS_TO_TICKS(Radio.GetWakeupTime()));
+					Radio.Send((uint8_t*)LoRaLB_Tx,LB_TX_SIZE);
+
+				}
+				else
+				{
+					HAL_GPIO_WritePin(GRN_LED_GPIO_Port, GRN_LED_Pin, GPIO_PIN_RESET);
+					HAL_GPIO_WritePin(YEL_LED_GPIO_Port, YEL_LED_Pin, GPIO_PIN_RESET);
+					Radio.Rx(RX_TIMEOUT);
+				}
+
+				break;
+
+			case STATE_TX_DONE:
+				LoRaState = STATE_IDLE;
+				Radio.Rx(RX_TIMEOUT); // enable receiving for  5 sec
+				break;
+
+			case STATE_RX_TIMEOUT:
+				LoRaState = STATE_IDLE;
+				HAL_GPIO_WritePin(GRN_LED_GPIO_Port, GRN_LED_Pin, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(YEL_LED_GPIO_Port, YEL_LED_Pin, GPIO_PIN_RESET);
+
+				Radio.Rx(RX_TIMEOUT);
+				break;
+
+			case STATE_RX_ERROR:
+				break;
+
+			case STATE_TX_TIMEOUT:
+				break;
+
+			case STATE_IDLE:
+				break;
+
+			}
+
+		}
+
+		 vTaskDelay(5);
+
+	}
+}
+
+
+//relese semapore when toggling the data ready pin
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+
+	if(GPIO_Pin==GPIO_PIN_11)
+	{
+
+		xSemaphoreGiveFromISR(xDataReadySemaphore,&xHigherPriorityTaskWoken);
+		portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+
+	}
+
+
+}
+
+
+void parsePacket(void)
+{
+	char *fcolon = strchr((char*)LoRaLB_Rx, ':');
+	if (fcolon == NULL)
+	{
+		return;
+	}
+
+	int lenSN = fcolon - (char*)LoRaLB_Rx;
+	if (lenSN >= sizeof(SNR))
+	{
+		lenSN = sizeof(SNR) - 1;
+	}
+	strncpy((char*)SNR, (char*)LoRaLB_Rx, lenSN);
+	SNR[lenSN] = '\0';
+
+	char *scolon = strchr(fcolon + 1, ':');
+	if (scolon == NULL)
+	{
+		return;
+	}
+
+	// Extract status as string
+	char statusStr[4];
+	int lenStatus = scolon - (fcolon + 1);
+
+	if (lenStatus >= sizeof(statusStr))
+	{
+		lenStatus = sizeof(statusStr) - 1;
+	}
+	strncpy(statusStr, fcolon + 1, lenStatus);
+	statusStr[lenStatus] = '\0';
+	chargeBit = atoi(statusStr);  // Convert to int (0 or 1)
+
+	// Extract RN
+	strncpy((char*)RN, scolon + 1, sizeof(RN) - 1);
+	RN[sizeof(RN) - 1] = '\0';
+
+}
+
+
+
+/* USER CODE END Application */

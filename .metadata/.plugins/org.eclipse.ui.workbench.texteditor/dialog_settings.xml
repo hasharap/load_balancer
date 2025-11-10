@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="PhaseConfirm"/>
+		<item value="vrms"/>
+		<item value="htim2"/>
+		<item value="read"/>
+		<item value="OnledEvent"/>
+		<item value="USER CODE BEGIN RBI_ConfigRFSwitch_2"/>
+		<item value="tcxo"/>
+		<item value="OnJoinRequest"/>
+		<item value="war"/>
+		<item value=" USER CODE BEGIN RBI_co"/>
+		<item value="XTAL"/>
+		<item value="interrupts"/>
+		<item value="reset_uart_buff"/>
+		<item value="rak"/>
+		<item value="uti"/>
+	</list>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="DetectLBType"/>
+		<list key="findhistory">
+			<item value="DetectLBType"/>
+			<item value="findNearestZeroCross"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+</section>

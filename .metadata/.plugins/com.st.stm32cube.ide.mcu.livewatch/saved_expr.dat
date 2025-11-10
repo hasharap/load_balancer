@@ -1,0 +1,14 @@
+bufferIndex
+previousSample
+DetectedPhases.currentRead_3
+PhaseData
+mark
+DefaultDirections.ofcurrentRead_3
+CurrentDirections.ofcurrentRead_3
+LoRaLB_Rx
+SNR
+RN
+LoRaLB_Tx
+SN
+confirm
+spi_rx_buf

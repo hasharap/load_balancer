@@ -1,0 +1,17 @@
+../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1257:22:LL_RCC_LSE_SetDriveCapability	16	static
+../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:449:22:LL_AHB2_GRP1_EnableClock	24	static
+../Core/Src/main.c:124:5:main	144	static
+../Core/Src/main.c:257:6:SystemClock_Config	112	static
+../Core/Src/main.c:304:6:radioInit	48	static
+../Core/Src/main.c:352:6:RadioOnDioIrq	16	static
+../Core/Src/main.c:386:6:eventTxDone	16	static
+../Core/Src/main.c:424:6:eventRxDone	16	static
+../Core/Src/main.c:488:6:eventTxTimeout	16	static
+../Core/Src/main.c:526:6:eventRxTimeout	16	static
+../Core/Src/main.c:564:6:eventRxError	16	static
+../Core/Src/main.c:602:6:enterMasterRx	16	static
+../Core/Src/main.c:621:6:enterSlaveRx	16	static
+../Core/Src/main.c:640:6:enterMasterTx	16	static
+../Core/Src/main.c:664:6:enterSlaveTx	16	static
+../Core/Src/main.c:688:6:transitionRxDone	96	static
+../Core/Src/main.c:712:6:Error_Handler	4	static,ignoring_inline_asm

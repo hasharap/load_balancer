@@ -1,0 +1,9 @@
+../Core/Src/main.c:95:6:OnTxDone	0	static
+../Core/Src/main.c:102:6:OnRxDone	0	static
+../Core/Src/main.c:110:6:OnTxTimeout	0	static
+../Core/Src/main.c:117:6:OnRxTimeout	8	static
+../Core/Src/main.c:124:6:OnRxError	0	static
+../Core/Src/main.c:130:6:RadioInit	64	static
+../Core/Src/main.c:226:6:SystemClock_Config	112	static,ignoring_inline_asm
+../Core/Src/main.c:160:5:main	8	static
+../Core/Src/main.c:278:6:Error_Handler	0	static,ignoring_inline_asm

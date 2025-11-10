@@ -1,0 +1,338 @@
+2025-06-25 00:06:34,971 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:06:35,016 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:06:35,016 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:06:35,017 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:06:35,018 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:06:35,018 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:06:35,019 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:06:35,019 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:06:35,019 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:06:35,019 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:06:35,019 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:06:35,020 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:21:07,907 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2025-06-25 00:26:00,804 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:00,805 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:00,805 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:00,806 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:00,806 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:00,806 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:00,806 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:00,806 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:00,807 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:00,807 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:00,815 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:00,815 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:08,200 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:08,200 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:08,200 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:08,200 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:08,200 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:08,200 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:08,200 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:08,200 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:08,201 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:16,141 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:16,142 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:16,142 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:16,142 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:16,142 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:16,142 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:26:22,105 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-06-25 00:26:22,108 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-06-25 00:26:22,109 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2025-06-25 00:27:05,815 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 908611832 Bytes (1073741824)
+2025-06-25 00:27:06,207 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 926963960 Bytes (1073741824)
+2025-06-25 00:27:07,640 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 769593688 Bytes (1073741824)
+2025-06-25 00:27:09,851 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: FREERTOS
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADV_TRACE
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SUBGHZ
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8WL5
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TINY_LPM
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RTC
+2025-06-25 00:27:09,852 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-06-25 00:27:09,853 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: MISC
+2025-06-25 00:27:09,853 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-06-25 00:27:09,853 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-06-25 00:27:09,853 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIMER
+2025-06-25 00:27:09,853 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DEBUG
+2025-06-25 00:27:09,854 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-06-25 00:27:09,854 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SubGHz_Phy
+2025-06-25 00:27:09,855 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.0.202502271554\\db\
+2025-06-25 00:27:09,876 [WARN] IP:2250 - HourFormat not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,876 [WARN] IP:2250 - SynchPrediv not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,876 [WARN] IP:2250 - OutPut1 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,877 [WARN] IP:2250 - OutPut2 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,877 [WARN] IP:2250 - OutPut3 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,877 [WARN] IP:2250 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,877 [WARN] IP:2250 - HourFormat not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,877 [WARN] IP:2250 - SynchPrediv not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,877 [WARN] IP:2250 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,877 [WARN] IP:2250 - Hours not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,877 [WARN] IP:2250 - Minutes not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,878 [WARN] IP:2250 - Seconds not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,878 [WARN] IP:2250 - TimeFormat not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,878 [WARN] IP:2250 - DayLightSaving not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,878 [WARN] IP:2250 - StoreOperation not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,878 [WARN] IP:2250 - WeekDay not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,878 [WARN] IP:2250 - Month not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,879 [WARN] IP:2250 - Date not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,879 [WARN] IP:2250 - Year not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,880 [WARN] IP:2250 - HourFormat not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,880 [WARN] IP:2250 - SynchPrediv not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,881 [WARN] IP:2250 - OutPut1 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,881 [WARN] IP:2250 - OutPut2 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,882 [WARN] IP:2250 - OutPut3 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,882 [WARN] IP:2250 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,882 [WARN] IP:2250 - Hours_A not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,882 [WARN] IP:2250 - Minutes_A not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,882 [WARN] IP:2250 - Seconds_A not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,883 [WARN] IP:2250 - AlarmMaskDateWeekDay not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,883 [WARN] IP:2250 - AlarmMaskHours not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,883 [WARN] IP:2250 - AlarmMaskMinutes not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,883 [WARN] IP:2250 - AlarmMaskSeconds not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,883 [WARN] IP:2250 - AlarmDateWeekDaySel not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,883 [WARN] IP:2250 - AlarmDateWeekDay not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,883 [WARN] IP:2250 - AlarmDateWeekDayARG not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,888 [WARN] IP:2250 - UTIL_SEQ_EN_M0 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:09,904 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-06-25 00:27:09,904 [INFO] Argument:327 - 	 sub Args: 
+2025-06-25 00:27:09,905 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel1
+2025-06-25 00:27:09,905 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel1
+2025-06-25 00:27:09,905 [INFO] Argument:325 - Argument : Initvalue: null
+2025-06-25 00:27:09,905 [INFO] Argument:327 - 	 sub Args: 
+2025-06-25 00:27:09,905 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_USART2_TX
+2025-06-25 00:27:09,905 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_USART2_TX
+2025-06-25 00:27:09,905 [INFO] Argument:325 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-06-25 00:27:09,905 [INFO] Argument:335 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2025-06-25 00:27:09,905 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-06-25 00:27:09,905 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-06-25 00:27:09,905 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-06-25 00:27:09,906 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-06-25 00:27:09,906 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2025-06-25 00:27:09,906 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_BYTE
+2025-06-25 00:27:09,906 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2025-06-25 00:27:09,906 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_BYTE
+2025-06-25 00:27:09,906 [INFO] Argument:325 - Argument : Modevalue: DMA_NORMAL
+2025-06-25 00:27:09,906 [INFO] Argument:335 - Argument : Modevalue: DMA_NORMAL
+2025-06-25 00:27:09,906 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-06-25 00:27:09,907 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-06-25 00:27:09,907 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:325 - Argument : Statevalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:335 - Argument : Statevalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:325 - Argument : XferM1CpltCallbackvalue: null
+2025-06-25 00:27:09,907 [INFO] Argument:335 - Argument : XferM1CpltCallbackvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:325 - Argument : XferM1HalfCpltCallbackvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:335 - Argument : XferM1HalfCpltCallbackvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2025-06-25 00:27:09,908 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-06-25 00:27:09,909 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-06-25 00:27:10,185 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\license.tmp_save
+2025-06-25 00:27:10,932 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\license.tmp
+2025-06-25 00:27:11,134 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\gpio.c_save
+2025-06-25 00:27:11,400 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\gpio.c
+2025-06-25 00:27:11,452 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\gpio.h_save
+2025-06-25 00:27:11,708 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\gpio.h
+2025-06-25 00:27:11,949 [WARN] IPConfigManager:103 - WARNING: Missing Config File for DEBUG ip!!
+2025-06-25 00:27:12,513 [WARN] IP:2250 - HourFormat not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,514 [WARN] IP:2250 - SynchPrediv not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,514 [WARN] IP:2250 - OutPut1 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,515 [WARN] IP:2250 - OutPut2 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,515 [WARN] IP:2250 - OutPut3 not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,516 [WARN] IP:2250 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,516 [WARN] IP:2250 - HourFormat not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,517 [WARN] IP:2250 - SynchPrediv not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,518 [WARN] IP:2250 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,518 [WARN] IP:2250 - Hours not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,518 [WARN] IP:2250 - Minutes not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,519 [WARN] IP:2250 - Seconds not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,519 [WARN] IP:2250 - TimeFormat not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,519 [WARN] IP:2250 - DayLightSaving not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,519 [WARN] IP:2250 - StoreOperation not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,519 [WARN] IP:2250 - WeekDay not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,519 [WARN] IP:2250 - Month not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,519 [WARN] IP:2250 - Date not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:12,520 [WARN] IP:2250 - Year not found: check if there is a RefParameter without a condition.
+2025-06-25 00:27:13,637 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2025-06-25 00:27:13,686 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_inc.tmp_save
+2025-06-25 00:27:13,947 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_inc.tmp
+2025-06-25 00:27:13,973 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_kernelInit.tmp_save
+2025-06-25 00:27:14,194 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_kernelInit.tmp
+2025-06-25 00:27:14,213 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-06-25 00:27:14,386 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_kernelStart.tmp
+2025-06-25 00:27:14,407 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_typedefs.tmp_save
+2025-06-25 00:27:14,557 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_typedefs.tmp
+2025-06-25 00:27:14,587 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_vars.tmp_save
+2025-06-25 00:27:14,768 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_vars.tmp
+2025-06-25 00:27:14,791 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_pfp.tmp_save
+2025-06-25 00:27:15,022 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_pfp.tmp
+2025-06-25 00:27:15,052 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-06-25 00:27:15,253 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_obj_creat.tmp
+2025-06-25 00:27:15,282 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_default_thread.tmp_save
+2025-06-25 00:27:15,410 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_default_thread.tmp
+2025-06-25 00:27:15,427 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_threads.tmp_save
+2025-06-25 00:27:15,517 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_threads.tmp
+2025-06-25 00:27:15,565 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_variables_SubGHz_Phy.tmp_save
+2025-06-25 00:27:15,692 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_variables_SubGHz_Phy.tmp
+2025-06-25 00:27:15,705 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_pool_create_SubGHz_Phy.tmp_save
+2025-06-25 00:27:15,796 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_pool_create_SubGHz_Phy.tmp
+2025-06-25 00:27:15,811 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_defines_SubGHz_Phy.tmp_save
+2025-06-25 00:27:15,914 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_defines_SubGHz_Phy.tmp
+2025-06-25 00:27:15,937 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2025-06-25 00:27:15,949 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_inc.tmp_save
+2025-06-25 00:27:16,058 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_inc.tmp
+2025-06-25 00:27:16,065 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_kernelInit.tmp_save
+2025-06-25 00:27:16,147 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_kernelInit.tmp
+2025-06-25 00:27:16,152 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-06-25 00:27:16,223 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_kernelStart.tmp
+2025-06-25 00:27:16,230 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_typedefs.tmp_save
+2025-06-25 00:27:16,305 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_typedefs.tmp
+2025-06-25 00:27:16,322 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_vars.tmp_save
+2025-06-25 00:27:16,407 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_vars.tmp
+2025-06-25 00:27:16,413 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_pfp.tmp_save
+2025-06-25 00:27:16,498 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_pfp.tmp
+2025-06-25 00:27:16,516 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-06-25 00:27:16,598 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_obj_creat.tmp
+2025-06-25 00:27:16,604 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_default_thread.tmp_save
+2025-06-25 00:27:16,683 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_default_thread.tmp
+2025-06-25 00:27:16,691 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_threads.tmp_save
+2025-06-25 00:27:16,762 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\rtos_threads.tmp
+2025-06-25 00:27:16,802 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\FreeRTOSConfig.h_save
+2025-06-25 00:27:16,929 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\FreeRTOSConfig.h
+2025-06-25 00:27:16,964 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\app_freertos.c_save
+2025-06-25 00:27:17,097 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\app_freertos.c
+2025-06-25 00:27:17,180 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\dma.c_save
+2025-06-25 00:27:17,300 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\dma.c
+2025-06-25 00:27:17,326 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\dma.h_save
+2025-06-25 00:27:17,461 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\dma.h
+2025-06-25 00:27:17,504 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\rtc.c_save
+2025-06-25 00:27:17,720 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\rtc.c
+2025-06-25 00:27:17,766 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\rtc.h_save
+2025-06-25 00:27:17,938 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\rtc.h
+2025-06-25 00:27:17,968 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\spi.c_save
+2025-06-25 00:27:18,147 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\spi.c
+2025-06-25 00:27:18,155 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\spi.h_save
+2025-06-25 00:27:18,287 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\spi.h
+2025-06-25 00:27:18,319 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\subghz.c_save
+2025-06-25 00:27:18,510 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\subghz.c
+2025-06-25 00:27:18,517 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\subghz.h_save
+2025-06-25 00:27:18,635 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\subghz.h
+2025-06-25 00:27:18,690 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\platform.h_save
+2025-06-25 00:27:18,793 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\platform.h
+2025-06-25 00:27:18,824 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\stm32_lpm_if.h_save
+2025-06-25 00:27:18,914 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\stm32_lpm_if.h
+2025-06-25 00:27:18,941 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\sys_app.h_save
+2025-06-25 00:27:19,044 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\sys_app.h
+2025-06-25 00:27:19,073 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\sys_conf.h_save
+2025-06-25 00:27:19,173 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\sys_conf.h
+2025-06-25 00:27:19,200 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\sys_debug.h_save
+2025-06-25 00:27:19,308 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\sys_debug.h
+2025-06-25 00:27:19,339 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\utilities_conf.h_save
+2025-06-25 00:27:19,446 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\utilities_conf.h
+2025-06-25 00:27:19,475 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\utilities_def.h_save
+2025-06-25 00:27:19,569 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\utilities_def.h
+2025-06-25 00:27:19,598 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\stm32wlxx_nucleo_conf.h_save
+2025-06-25 00:27:19,689 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\stm32wlxx_nucleo_conf.h
+2025-06-25 00:27:19,717 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\stm32_lpm_if.c_save
+2025-06-25 00:27:19,816 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\stm32_lpm_if.c
+2025-06-25 00:27:19,843 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\sys_app.c_save
+2025-06-25 00:27:19,951 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\sys_app.c
+2025-06-25 00:27:19,976 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\sys_debug.c_save
+2025-06-25 00:27:20,091 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\sys_debug.c
+2025-06-25 00:27:20,120 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\app_subghz_phy.c_save
+2025-06-25 00:27:20,221 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\app_subghz_phy.c
+2025-06-25 00:27:20,247 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\app_subghz_phy.h_save
+2025-06-25 00:27:20,331 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\app_subghz_phy.h
+2025-06-25 00:27:20,364 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\subghz_phy_app.c_save
+2025-06-25 00:27:20,490 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\subghz_phy_app.c
+2025-06-25 00:27:20,521 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\subghz_phy_app.h_save
+2025-06-25 00:27:20,617 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\subghz_phy_app.h
+2025-06-25 00:27:20,644 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\app_version.h_save
+2025-06-25 00:27:20,732 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\App\app_version.h
+2025-06-25 00:27:20,758 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\mw_log_conf.h_save
+2025-06-25 00:27:20,849 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\mw_log_conf.h
+2025-06-25 00:27:20,880 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\radio_board_if.c_save
+2025-06-25 00:27:21,017 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\radio_board_if.c
+2025-06-25 00:27:21,044 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\radio_board_if.h_save
+2025-06-25 00:27:21,142 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\radio_board_if.h
+2025-06-25 00:27:21,181 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\radio_conf.h_save
+2025-06-25 00:27:21,288 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\radio_conf.h
+2025-06-25 00:27:21,317 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\timer.h_save
+2025-06-25 00:27:21,426 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\SubGHz_Phy\Target\timer.h
+2025-06-25 00:27:21,454 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\timer_if.h_save
+2025-06-25 00:27:21,541 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\timer_if.h
+2025-06-25 00:27:21,569 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\timer_if.c_save
+2025-06-25 00:27:21,700 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\timer_if.c
+2025-06-25 00:27:21,706 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_variables_SubGHz_Phy.tmp_save
+2025-06-25 00:27:21,773 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_variables_SubGHz_Phy.tmp
+2025-06-25 00:27:21,779 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_pool_create_SubGHz_Phy.tmp_save
+2025-06-25 00:27:21,848 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_pool_create_SubGHz_Phy.tmp
+2025-06-25 00:27:21,854 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_defines_SubGHz_Phy.tmp_save
+2025-06-25 00:27:21,919 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\RTOS_defines_SubGHz_Phy.tmp
+2025-06-25 00:27:21,945 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\usart_if.h_save
+2025-06-25 00:27:22,039 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\usart_if.h
+2025-06-25 00:27:22,068 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\usart_if.c_save
+2025-06-25 00:27:22,165 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\usart_if.c
+2025-06-25 00:27:22,194 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\tim.c_save
+2025-06-25 00:27:22,341 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\tim.c
+2025-06-25 00:27:22,347 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\tim.h_save
+2025-06-25 00:27:22,449 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\tim.h
+2025-06-25 00:27:22,475 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\usart.c_save
+2025-06-25 00:27:22,632 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\usart.c
+2025-06-25 00:27:22,637 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\usart.h_save
+2025-06-25 00:27:22,738 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\usart.h
+2025-06-25 00:27:22,787 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\stm32wlxx_it.c_save
+2025-06-25 00:27:23,038 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\stm32wlxx_it.c
+2025-06-25 00:27:23,067 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\stm32wlxx_it.h_save
+2025-06-25 00:27:23,176 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\stm32wlxx_it.h
+2025-06-25 00:27:23,383 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\stm32wlxx_hal_msp.c_save
+2025-06-25 00:27:23,608 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\stm32wlxx_hal_msp.c
+2025-06-25 00:27:23,634 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\system.tmp_save
+2025-06-25 00:27:23,771 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\MXTmpFiles\system.tmp
+2025-06-25 00:27:23,832 [INFO] CodeEngine:319 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\stm32wlxx_hal_conf.h_save
+2025-06-25 00:27:24,047 [INFO] CodeEngine:343 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\stm32wlxx_hal_conf.h
+2025-06-25 00:27:24,157 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\main.h_save
+2025-06-25 00:27:24,380 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Inc\main.h
+2025-06-25 00:27:24,418 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\main.c_save
+2025-06-25 00:27:24,687 [INFO] CodeEngine:287 - Generated code: D:\Projects\LoRa_SOM\RAK3172\Load_Balancer\Core\Src\main.c
+2025-06-25 00:27:25,513 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 474mS.
+2025-06-25 00:27:25,522 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0-B36
+2025-06-25 00:27:25,705 [INFO] ConfigFileManager:1590 - The Die is : DIE497
+2025-06-25 00:27:28,881 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 3358mS.
+2025-06-25 00:27:28,882 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-06-25 00:27:28,892 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-06-25 02:20:23,130 [INFO] WebApp:194 - Connection lost
+2025-06-25 02:20:23,810 [INFO] WebApp:191 - Connection restablished
+2025-06-25 02:52:48,861 [INFO] WebApp:194 - Connection lost
+2025-06-25 02:52:49,575 [INFO] WebApp:191 - Connection restablished
+2025-06-25 02:53:04,366 [INFO] WebApp:194 - Connection lost
+2025-06-25 02:53:04,604 [INFO] WebApp:191 - Connection restablished

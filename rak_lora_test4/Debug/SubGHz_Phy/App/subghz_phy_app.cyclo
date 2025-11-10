@@ -1,0 +1,8 @@
+../SubGHz_Phy/App/subghz_phy_app.c:156:6:SubghzApp_Init	1
+../SubGHz_Phy/App/subghz_phy_app.c:252:13:OnTxDone	1
+../SubGHz_Phy/App/subghz_phy_app.c:263:13:OnRxDone	3
+../SubGHz_Phy/App/subghz_phy_app.c:304:13:OnTxTimeout	1
+../SubGHz_Phy/App/subghz_phy_app.c:315:13:OnRxTimeout	1
+../SubGHz_Phy/App/subghz_phy_app.c:326:13:OnRxError	1
+../SubGHz_Phy/App/subghz_phy_app.c:338:13:PingPong_Process	12
+../SubGHz_Phy/App/subghz_phy_app.c:446:13:OnledEvent	1

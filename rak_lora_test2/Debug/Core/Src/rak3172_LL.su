@@ -1,0 +1,4 @@
+../Core/Src/rak3172_LL.c:14:19:Set_BufferBaseAddress	24	static
+../Core/Src/rak3172_LL.c:23:19:write_Payload_TxData	24	static
+../Core/Src/rak3172_LL.c:30:19:Set_PacketType_LoRa	16	static
+../Core/Src/rak3172_LL.c:36:20:Set_PacketParams	24	static

@@ -1,0 +1,7 @@
+../Core/Src/app_freertos.c:250:6:MainTask	15
+../Core/Src/app_freertos.c:422:6:Task02	3
+../Core/Src/app_freertos.c:447:6:Task03	6
+../Core/Src/app_freertos.c:169:6:MX_FREERTOS_Init	1
+../Core/Src/app_freertos.c:647:6:HAL_GPIO_EXTI_Callback	3
+../Core/Src/app_freertos.c:663:6:parsePacket	3
+../Core/Src/app_freertos.c:501:6:Task04	13

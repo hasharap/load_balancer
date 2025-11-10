@@ -1,0 +1,6 @@
+../Core/Src/rak3172LoRa.c:26:6:OnTxDone	8	static
+../Core/Src/rak3172LoRa.c:33:6:OnRxDone	24	static
+../Core/Src/rak3172LoRa.c:43:6:OnTxTimeout	4	static
+../Core/Src/rak3172LoRa.c:50:6:OnRxTimeout	4	static
+../Core/Src/rak3172LoRa.c:55:6:OnRxError	4	static
+../Core/Src/rak3172LoRa.c:63:6:RadioInit	56	static

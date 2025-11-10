@@ -1,0 +1,10 @@
+21:38:57 **** Build of configuration Debug for project Load_Balancer ****
+make -j12 all 
+arm-none-eabi-size  Load_Balancer.elf 
+   text	   data	    bss	    dec	    hex	filename
+  66576	    596	  39544	 106716	  1a0dc	Load_Balancer.elf
+Finished building: default.size.stdout
+ 
+
+21:38:58 Build Finished. 0 errors, 0 warnings. (took 420ms)
+

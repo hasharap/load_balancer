@@ -1,0 +1,44 @@
+15:15:17 **** Incremental Build of configuration Debug for project rak_lora_test3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/sys_app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WLE5xx -c -I../Core/Inc -I../Drivers/STM32WLxx_HAL_Driver/Inc -I../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../Drivers/CMSIS/Include -I../SubGHz_Phy/App -I../SubGHz_Phy/Target -I../Utilities/trace/adv_trace -I../Utilities/misc -I../Utilities/sequencer -I../Utilities/timer -I../Utilities/lpm/tiny_lpm -I../Middlewares/Third_Party/SubGHz_Phy -I../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sys_app.d" -MT"Core/Src/sys_app.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sys_app.o"
+../Core/Src/sys_app.c: In function 'SystemApp_Init':
+../Core/Src/sys_app.c:78:11: warning: implicit declaration of function 'DBG_Init' [-Wimplicit-function-declaration]
+   78 |           DBG_Init();
+      |           ^~~~~~~~
+../Core/Src/sys_app.c:81:11: warning: implicit declaration of function 'UTIL_ADV_TRACE_Init'; did you mean 'UTIL_ADV_TRACE_DEBUG'? [-Wimplicit-function-declaration]
+   81 |           UTIL_ADV_TRACE_Init();
+      |           ^~~~~~~~~~~~~~~~~~~
+      |           UTIL_ADV_TRACE_DEBUG
+../Core/Src/sys_app.c:82:11: warning: implicit declaration of function 'UTIL_ADV_TRACE_RegisterTimeStampFunction' [-Wimplicit-function-declaration]
+   82 |           UTIL_ADV_TRACE_RegisterTimeStampFunction(TimestampNow);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/sys_app.c:82:52: error: 'TimestampNow' undeclared (first use in this function)
+   82 |           UTIL_ADV_TRACE_RegisterTimeStampFunction(TimestampNow);
+      |                                                    ^~~~~~~~~~~~
+../Core/Src/sys_app.c:82:52: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/sys_app.c:85:11: warning: implicit declaration of function 'UTIL_ADV_TRACE_SetVerboseLevel' [-Wimplicit-function-declaration]
+   85 |           UTIL_ADV_TRACE_SetVerboseLevel(VERBOSE_LEVEL);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/sys_app.c:85:42: error: 'VERBOSE_LEVEL' undeclared (first use in this function)
+   85 |           UTIL_ADV_TRACE_SetVerboseLevel(VERBOSE_LEVEL);
+      |                                          ^~~~~~~~~~~~~
+../Core/Src/sys_app.c:88:11: warning: implicit declaration of function 'UTIL_LPM_Init'; did you mean 'UTIL_TIMER_Init'? [-Wimplicit-function-declaration]
+   88 |           UTIL_LPM_Init();
+      |           ^~~~~~~~~~~~~
+      |           UTIL_TIMER_Init
+../Core/Src/sys_app.c:90:11: warning: implicit declaration of function 'UTIL_LPM_SetOffMode' [-Wimplicit-function-declaration]
+   90 |           UTIL_LPM_SetOffMode((1 << CFG_LPM_APPLI_Id), UTIL_LPM_DISABLE);
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/sys_app.c:90:37: error: 'CFG_LPM_APPLI_Id' undeclared (first use in this function); did you mean 'CFG_LPM_DUMMY_Id'?
+   90 |           UTIL_LPM_SetOffMode((1 << CFG_LPM_APPLI_Id), UTIL_LPM_DISABLE);
+      |                                     ^~~~~~~~~~~~~~~~
+      |                                     CFG_LPM_DUMMY_Id
+../Core/Src/sys_app.c:90:56: error: 'UTIL_LPM_DISABLE' undeclared (first use in this function); did you mean 'UART_LIN_DISABLE'?
+   90 |           UTIL_LPM_SetOffMode((1 << CFG_LPM_APPLI_Id), UTIL_LPM_DISABLE);
+      |                                                        ^~~~~~~~~~~~~~~~
+      |                                                        UART_LIN_DISABLE
+make: *** [Core/Src/subdir.mk:67: Core/Src/sys_app.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+15:15:19 Build Failed. 5 errors, 6 warnings. (took 1s.881ms)
+

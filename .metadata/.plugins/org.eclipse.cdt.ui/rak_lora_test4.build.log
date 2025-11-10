@@ -1,0 +1,10 @@
+15:39:31 **** Incremental Build of configuration Debug for project rak_lora_test4 ****
+make -j8 all 
+arm-none-eabi-size  rak_lora_test4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  45884	     20	   3180	  49084	   bfbc	rak_lora_test4.elf
+Finished building: default.size.stdout
+ 
+
+15:39:32 Build Finished. 0 errors, 0 warnings. (took 834ms)
+

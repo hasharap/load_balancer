@@ -1,0 +1,89 @@
+12:22:18 **** Incremental Build of configuration Debug for project rak_lora_test2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WLE5xx -c -I../Core/Inc -I../Drivers/STM32WLxx_HAL_Driver/Inc -I../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  102 |     sprintf(uart_buff, "\n\r\n\rReciever:\n\r");
+      |     ^~~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:102:5: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  102 |     sprintf(uart_buff, "\n\r\n\rReciever:\n\r");
+      |     ^~~~~~~
+../Core/Src/main.c:102:5: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:102:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  102 |     sprintf(uart_buff, "\n\r\n\rReciever:\n\r");
+      |             ^~~~~~~~~
+      |             |
+      |             uint8_t * {aka unsigned char *}
+../Core/Src/main.c:102:13: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:200:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  200 |     sprintf(uart_buff, "Interrupts after set:  %i %i %i \n\r", interrupts[0], interrupts[1], interrupts[2]);
+      |             ^~~~~~~~~
+      |             |
+      |             uint8_t * {aka unsigned char *}
+../Core/Src/main.c:200:13: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:235:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  235 |     sprintf(uart_buff, "Payload: %s \n\r", payload);
+      |             ^~~~~~~~~
+      |             |
+      |             uint8_t * {aka unsigned char *}
+../Core/Src/main.c:235:13: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:246:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  246 |     sprintf(uart_buff, "\n\rReciever interrupts in bits:\n\r");
+      |             ^~~~~~~~~
+      |             |
+      |             uint8_t * {aka unsigned char *}
+../Core/Src/main.c:246:13: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:252:19: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  252 |           sprintf(uart_buff, "%i |", i);
+      |                   ^~~~~~~~~
+      |                   |
+      |                   uint8_t * {aka unsigned char *}
+../Core/Src/main.c:252:19: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:257:13: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  257 |     sprintf(uart_buff, "\n\r");
+      |             ^~~~~~~~~
+      |             |
+      |             uint8_t * {aka unsigned char *}
+../Core/Src/main.c:257:13: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:278:35: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  278 |                           sprintf(uart_buff, "%i |", bits[i]);
+      |                                   ^~~~~~~~~
+      |                                   |
+      |                                   uint8_t * {aka unsigned char *}
+../Core/Src/main.c:278:35: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:281:35: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  281 |                           sprintf(uart_buff, "%i  |", bits[i]);
+      |                                   ^~~~~~~~~
+      |                                   |
+      |                                   uint8_t * {aka unsigned char *}
+../Core/Src/main.c:281:35: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:287:19: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  287 |           sprintf(uart_buff, "\n\r");
+      |                   ^~~~~~~~~
+      |                   |
+      |                   uint8_t * {aka unsigned char *}
+../Core/Src/main.c:287:19: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:235:34: warning: '%s' directive writing up to 63 bytes into a region of size 56 [-Wformat-overflow=]
+  235 |     sprintf(uart_buff, "Payload: %s \n\r", payload);
+      |                                  ^~        ~~~~~~~
+../Core/Src/main.c:235:5: note: 'sprintf' output between 13 and 76 bytes into a destination of size 65
+  235 |     sprintf(uart_buff, "Payload: %s \n\r", payload);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rak_lora_test2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Projects\LoRa_SOM\RAK3172\rak_lora_test2\STM32WLE5CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rak_lora_test2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rak_lora_test2.elf
+ 
+arm-none-eabi-size  rak_lora_test2.elf 
+arm-none-eabi-objdump -h -S rak_lora_test2.elf  > "rak_lora_test2.list"
+   text	   data	    bss	    dec	    hex	filename
+  18828	     92	   2204	  21124	   5284	rak_lora_test2.elf
+Finished building: default.size.stdout
+ 
+Finished building: rak_lora_test2.list
+ 
+
+12:22:20 Build Finished. 0 errors, 12 warnings. (took 1s.559ms)
+

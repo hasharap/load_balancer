@@ -1,0 +1,6 @@
+../Core/Src/rak3172LoRa.c:27:6:OnTxDone	1
+../Core/Src/rak3172LoRa.c:33:6:OnRxDone	2
+../Core/Src/rak3172LoRa.c:46:6:OnTxTimeout	1
+../Core/Src/rak3172LoRa.c:53:6:OnRxTimeout	1
+../Core/Src/rak3172LoRa.c:60:6:OnRxError	1
+../Core/Src/rak3172LoRa.c:68:6:RadioInit	1

@@ -1,0 +1,12 @@
+../Core/Src/mcp3912Lib.c:123:6:mcp3912begin	8	static
+../Core/Src/mcp3912Lib.c:143:6:isZeroCross	16	static
+../Core/Src/mcp3912Lib.c:149:5:findNearestZeroCross	32	static
+../Core/Src/mcp3912Lib.c:167:12:findMatchingPhase	24	static
+../Core/Src/mcp3912Lib.c:197:6:SwapToProcess	48	static
+../Core/Src/mcp3912Lib.c:247:6:readChannels	56	static
+../Core/Src/mcp3912Lib.c:307:16:DetectLBType	32	static
+../Core/Src/mcp3912Lib.c:323:16:calculateDirection	24	static
+../Core/Src/mcp3912Lib.c:338:8:getVoltageBuffer	0	static
+../Core/Src/mcp3912Lib.c:348:6:updateMark	0	static
+../Core/Src/mcp3912Lib.c:361:6:directionsConfirm	8	static
+../Core/Src/mcp3912Lib.c:368:6:PhasesConfirm	8	static
