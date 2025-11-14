@@ -23,8 +23,9 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="DetectLBType"/>
+		<item key="selection" value="calibr"/>
 		<list key="findhistory">
+			<item value="calibr"/>
 			<item value="DetectLBType"/>
 			<item value="findNearestZeroCross"/>
 		</list>

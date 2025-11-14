@@ -93,7 +93,7 @@ typedef struct {
 
 
 typedef enum {
-	NotApper,
+	NotApper=0,
 	Sp1,
 	Sp2,
 	Sp3,

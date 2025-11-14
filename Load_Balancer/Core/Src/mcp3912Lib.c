@@ -308,13 +308,13 @@ LoadBalancer_t DetectLBType(struct PhaseDataStruct data , float threshold)
 {
 	if (data.I1rms > threshold && data.I2rms > threshold && data.I3rms > threshold)
 	        return Tp;
-	    else if (data.I1rms > threshold)
+	else if (data.I1rms > threshold)
 	        return Sp1;
-	    else if (data.I2rms > threshold)
+	else if (data.I2rms > threshold)
 	        return Sp2;
-	    else if (data.I3rms > threshold)
+	else if (data.I3rms > threshold)
 	        return Sp3;
-	    else
+	else
 	        return NotApper;
 
 }

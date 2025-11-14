@@ -1,10 +1,9 @@
 bufferIndex
 previousSample
-DetectedPhases.currentRead_3
+DetectedPhases
 PhaseData
 mark
-DefaultDirections.ofcurrentRead_3
-CurrentDirections.ofcurrentRead_3
+DefaultDirections
 LoRaLB_Rx
 SNR
 RN
@@ -12,3 +11,8 @@ LoRaLB_Tx
 SN
 confirm
 spi_rx_buf
+confLBType
+ConfigData
+PhaseData
+lbConfmCounter
+savedLBType

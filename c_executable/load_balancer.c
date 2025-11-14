@@ -115,7 +115,7 @@ void handle_serial_line(const char *line) {
         printf("val%d\n",val);
         printf("line %s\n",line);
         if (val != 0 || line[0] == '0') {
-            int Control_Current = max_current - val;
+            int Control_Current = val;
             snprintf(content, sizeof(content), "%d", Control_Current);
             snprintf(lb_state, sizeof(lb_state), "1\n");
             printf("content: %s\n", content);
@@ -216,7 +216,7 @@ int main() {
     char serial_buf[MAX_LINE];
     int serial_index = 0;
 
-    max_current = read_mcu_value_int("/chargerFiles/config.json", "max_current_capacity");
+    max_current = read_mcu_value_int("/chargerFiles/config.json", "max_current");
 
     last_serial_time = time(NULL); // start tracking
 
@@ -261,6 +261,7 @@ int main() {
             write_file(FILE_LB_STATE, "0\n"); // ADDED: mark unavailable
             printf("RAK communication doesnt work\n");
         }
+
         
 
         usleep(200000);

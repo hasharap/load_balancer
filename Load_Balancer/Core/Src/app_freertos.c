@@ -405,7 +405,7 @@ void MainTask(void *argument)
     		  snprintf((char*)LoRaLB_Tx, sizeof(LoRaLB_Tx), "%s:%+.2f:%+.2f:%+.2f", confCalibrate, PhaseData.I1rms, PhaseData.I2rms,PhaseData.I3rms);
     		  AES_CBC_encrypt_buffer(&ctx, LoRaLB_Tx, LB_TX_SIZE);
               Radio.Send((uint8_t*)LoRaLB_Tx,LB_TX_SIZE);
-              vTaskDelay(100);
+              vTaskDelay(1000);
     		  HAL_NVIC_SystemReset();  // reset
     	  }
 
