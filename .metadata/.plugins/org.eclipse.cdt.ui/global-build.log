@@ -13860,3 +13860,10 @@ Finished building: Load_Balancer.bin
  
 Finished building: Load_Balancer.list
  
+19:51:23 **** Incremental Build of configuration Debug for project Load_Balancer ****
+make -j12 all 
+arm-none-eabi-size  Load_Balancer.elf 
+   text	   data	    bss	    dec	    hex	filename
+  66576	    596	  39544	 106716	  1a0dc	Load_Balancer.elf
+Finished building: default.size.stdout
+ 
